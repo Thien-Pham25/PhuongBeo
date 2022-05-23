@@ -1,0 +1,128 @@
+$color: rgb(2, 2, 2);
+$color_2: rgb(10, 60, 126);
+body{
+    background: #fff;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    .slide-show{
+        margin-top: 20px;
+        img{
+            max-width: 100%;
+            width: 500px;
+            height: 500px;
+        }  
+    }    
+}
+img{
+    max-width: 100%;
+    width: 300px;
+    height: 250px;
+}  
+
+
+
+a{
+    text-decoration: none;  
+    &:hover{
+        text-decoration: none;
+    }
+
+}
+ul, li
+{
+    margin: 0;
+    padding: 0;
+    list-style: 0;
+}
+header
+{
+    .top-header
+    {
+        background: #ffa6a6;
+        font-size: 14px;
+        color: rgb(2, 2, 2);
+        padding: 3px 0;
+        p{
+            margin-bottom: 0;
+            line-height: 35px;
+            font-size: 13px;
+        }
+        .social{
+            a{
+                i{
+                    width: 35px;
+                    height: 35px;
+                    text-align: center;
+                    line-height: 35px;
+                    border-radius: 50%;
+                    border: 1px solid $color;
+                }
+            }
+        }
+    }
+    .main-header{
+        padding: 15px 0;
+        img{
+            max-width: 100%;
+            width: 150px;
+            height: 100px;
+        }
+        
+    }
+    .menu-header{
+        background: $color_2;
+        ul
+        {
+            li
+            {
+                display: inline-block;
+                transition: all .3s;
+                position: relative;
+                ul{
+                    position: absolute;
+                    width: 150px;
+                    background: $color;
+                    left: 0;
+                    top: 80px;
+                    text-align: left;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all .3s;
+                    z-index: 99;
+                    li{
+                        display: block;
+                        a{
+                            display: block;
+                            text-transform: inherit;
+                            padding: 5px;
+                            border-bottom: dashed 1px #ededed;
+                        }
+                    }
+                }
+                a{
+                    display: inline-block;
+                    padding: 10px 30px;
+                    text-transform: uppercase;
+                    color: #fff ;
+                }           
+                &.active{         
+                    a{
+                        background: $color;
+                    }
+                }
+                &:hover{
+                    transition: all .3s;
+                    a{
+                    background: $color;
+                    }
+                    ul{
+                        opacity: 1;
+                        visibility: visible;
+                        top: 40px;
+                    }
+                }
+
+            }
+        }
+    }
+}
